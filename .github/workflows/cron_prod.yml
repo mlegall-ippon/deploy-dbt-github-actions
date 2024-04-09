@@ -9,7 +9,7 @@ jobs:
     name: scheduled_run
     runs-on: ubuntu-latest
     env:
-      SNOWFLAKE_PASSWORD_MOWGLI_DBT_DEV: ${{ secrets.SNOWFLAKE_PASSWORD_DBT_PROD }}
+      SNOWFLAKE_PASSWORD_DBT_PROD: ${{ secrets.SNOWFLAKE_PASSWORD_DBT_PROD }}
       DBT_ENV_SECRET_GIT_TOKEN: ${{ secrets.DBT_ENV_SECRET_GIT_TOKEN }}
 
     steps:

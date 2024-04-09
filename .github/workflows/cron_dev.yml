@@ -1,15 +1,15 @@
-name: scheduled_run
+name: scheduled_run_dev
 
 on:
   schedule:
-    - cron: '33 13,14,15 * * *'
+    - cron: '40 14,15,16 * * *'
 
 jobs: 
   scheduled_run:
     name: scheduled_run
     runs-on: ubuntu-latest
     env:
-      SNOWFLAKE_PASSWORD_MOWGLI_DBT_DEV: ${{ secrets.SNOWFLAKE_PASSWORD_DBT_DEV }}
+      SNOWFLAKE_PASSWORD_DBT_DEV: ${{ secrets.SNOWFLAKE_PASSWORD_DBT_DEV }}
       DBT_ENV_SECRET_GIT_TOKEN: ${{ secrets.DBT_ENV_SECRET_GIT_TOKEN }}
 
     steps:

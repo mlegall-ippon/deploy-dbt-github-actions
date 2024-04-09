@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: semana_schema
+    database: "{{ target.database }}"
+    schema: semana_schema
+    tables:
+      - name: collaborators

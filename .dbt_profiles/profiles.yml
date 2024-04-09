@@ -1,0 +1,34 @@
+deploy_dbt_github_actions:
+  target: dev
+  outputs:
+    dev:
+      account: ipponpartner.eu-west-1
+      database: MLEGALL_DB
+      password: "{{env_var('SNOWFLAKE_PASSWORD_DBT_DEV')}}"
+      role: MLEGALL_ROLE
+      schema: "{{env_var('DEV_SCHEMA_NAME')}}"
+      threads: 4
+      type: snowflake
+      user: mlegall
+      warehouse: MLEGALL_WH_XS
+    prod:
+      account: ipponpartner.eu-west-1
+      database: MLEGALL_DB
+      password: "{{env_var('SNOWFLAKE_PASSWORD_DBT_PROD')}}"
+      role: MLEGALL_ROLE
+      schema: "{{env_var('PROD_SCHEMA_NAME')}}"
+      threads: 4
+      type: snowflake
+      user: mlegall
+      warehouse: MLEGALL_WH_XS
+    ci:
+      account: ipponpartner.eu-west-1
+      database: MLEGALL_DB
+      password: "{{env_var('SNOWFLAKE_PASSWORD_DBT_DEV')}}"
+      role: MLEGALL_ROLE
+      schema: "{{env_var('PR_SCHEMA_NAME')}}"
+      threads: 4
+      type: snowflake
+      user: mlegall
+      warehouse: MLEGALL_WH_XS
+      

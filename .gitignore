@@ -1,0 +1,9 @@
+target/
+dbt_packages/
+logs/
+.venv/
+.vscode/
+.dbt_profiles/.user.yml
+.env
+sqlfluff_libs/__pycache__/
+package-lock.yml

@@ -2,7 +2,7 @@ name: scheduled_run_prod
 
 on:
   schedule:
-    - cron: '50 13,14,15 * * *'
+    - cron: '50 15 1 * *'
 
 jobs: 
   scheduled_run:
